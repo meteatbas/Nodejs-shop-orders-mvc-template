@@ -32,7 +32,7 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-mongoose.connect('mongodb+srv://techmete:i7xrnMcCIBO9surM@node-js-shopping-site.fplbl.mongodb.net/shop?retryWrites=true&w=majority')
+mongoose.connect('db')
 .then(result=>{
     User.findOne().then(user=>{
         if (!user) {
